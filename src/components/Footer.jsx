@@ -6,7 +6,7 @@ function Footer() {
     <div className="h-[calc(100vh-70vh)] container mx-auto flex justify-between items-center font-body font-light ">
       {/* footer logo */}
       <div>
-        <img className="w-32 cursor-pointer" src="public\logo.svg" alt="" />
+        <img className="w-32 cursor-pointer" src="src/assets/group-image-1.png" alt="" />
       </div>
 
       {/* nav links */}

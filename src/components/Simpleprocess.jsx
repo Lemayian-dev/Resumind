@@ -17,7 +17,7 @@ function Simpleprocess() {
       <div className="flex flex-col lg:flex-row items-center justify-center">
         <img
           className="w-full max-w-3xl mx-auto h-auto object-cover"
-          src="public\group-image-1.png"
+          src="src/assets/group-image-1.png"
           alt=""
         />
         <div className="flex flex-col gap-y-4 items-center justify-center">

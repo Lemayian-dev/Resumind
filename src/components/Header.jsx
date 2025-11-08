@@ -10,8 +10,7 @@ import {
 import { useClerk } from "@clerk/clerk-react";
 
 function Header() {
-  const {openSignIn} = useClerk();
-
+  const { openSignIn } = useClerk();
 
   return (
     <>
@@ -28,7 +27,11 @@ function Header() {
         <nav className=" p-4 top-0 z-50 h-16 font-body">
           <div className="container mx-auto flex justify-between items-center">
             {/* Logo main */}
-            <img className="w-32 cursor-pointer" src="public\logo.svg" alt="" />
+            <img
+              className="w-32 cursor-pointer"
+              src="src/assets/logo.svg"
+              alt=""
+            />
 
             {/* Nav links */}
             <div className="hidden lg:inline ">
@@ -61,12 +64,14 @@ function Header() {
               </ul>
             </div>
             <div>
-              <button onClick={() => openSignIn()} class="rounded-full  border-0 bg-primary px-8 py-2 text-base text-white cursor-pointer hidden lg:inline">
+              <button
+                onClick={() => openSignIn()}
+                class="rounded-full  border-0 bg-primary px-8 py-2 text-base text-white cursor-pointer hidden lg:inline"
+              >
                 Get started
               </button>
               <Menu className="inline lg:hidden" />
             </div>
-            
           </div>
         </nav>
       </header>
