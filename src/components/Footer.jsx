@@ -1,12 +1,20 @@
 import React from "react";
 import { Linkedin, Facebook } from "lucide-react";
 
+import logoUrl from "/logo.svg";
+
 function Footer() {
   return (
     <div className="h-[calc(100vh-70vh)] container mx-auto flex justify-between items-center font-body font-light ">
       {/* footer logo */}
       <div>
-        <img className="w-32 cursor-pointer" src="src/assets/group-image-1.png" alt="" />
+        {/* <img
+          className="w-32 cursor-pointer"
+          src="src/assets/logo.svg
+        "
+          alt=""
+        /> */}
+        <img src={logoUrl || "/logo.svg"} alt="Logo" />
       </div>
 
       {/* nav links */}
