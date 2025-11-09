@@ -17,7 +17,7 @@ function Header() {
     <>
       <header>
         {/* Background blob */}
-        <div className="absolute top-[12rem] right-[50rem] w-[600px] h-[600px] rounded-full bg-primary blur-[120px] opacity-12 "></div>
+        {/* <div className="absolute top-[12rem] right-[50rem] w-[600px] h-[600px] rounded-full bg-primary blur-[120px] opacity-12 "></div> */}
         {/* Top ticker */}
         <div className="w-full font-body h-10  bg-gradient-to-r from-white via-green-200 to white flex items-center justify-center gap-4">
           <button className="bg-primary text-white px-2 py-0.5 rounded-xl">
@@ -74,7 +74,7 @@ function Header() {
                 onClick={() => openSignIn()}
                 class="rounded-full  border-0 bg-primary px-8 py-2 text-base text-white cursor-pointer hidden lg:inline"
               >
-                Get started
+                Login
               </button>
               <Menu className="inline lg:hidden" />
             </div>

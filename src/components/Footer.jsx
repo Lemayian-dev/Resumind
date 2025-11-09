@@ -5,7 +5,7 @@ import logoUrl from "/logo.svg";
 
 function Footer() {
   return (
-    <div className="h-[calc(100vh-70vh)] container mx-auto flex justify-between items-center font-body font-light ">
+    <div className="h-[calc(100vh-70vh)] container mx-auto flex flex-col mt-24 gap-8 items-center font-body font-light sm:flex-row md:flex-row lg:flex-row xl:flex-row lg:justify-around">
       {/* footer logo */}
       <div>
         {/* <img
@@ -40,7 +40,20 @@ function Footer() {
       <div className="flex">
         <Linkedin />
         <Facebook />
-      </div>
+      </div> 
+      {/* <div>
+        <ul className="flex space-x-4">
+          <li>
+            <a href="#home" className=" hover:text-primary underline text-green">
+              Privacy policy
+            </a>
+          </li>
+         
+        </ul>
+      </div> */}
+      {/* <div>
+        <p>Copyright @Resumind 2025</p>
+      </div> */}
     </div>
   );
 }

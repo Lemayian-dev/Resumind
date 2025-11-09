@@ -1,3 +1,4 @@
+// ...existing code...
 import React from "react";
 import { Star } from "lucide-react";
 import Logo1 from "/company-logos/framer.svg";
@@ -5,97 +6,90 @@ import Logo2 from "/company-logos/huawei.svg";
 import Logo3 from "/company-logos/instagram.svg";
 import Logo4 from "/company-logos/microsoft.svg";
 import Logo5 from "/company-logos/walmart.svg";
+import { useClerk } from "@clerk/clerk-react";
+
 function Hero() {
+  // function to trigger clerk auth
+  const { openSignUp } = useClerk();
   return (
-    <div className="">
-      <section class=" h-[calc(100vh-8rem)] mx-auto px-8 py-36 text-center sm:px-12 flex flex-col items-center justify-center">
+    <div>
+      {/* Background blob */}
+      <div className="absolute z-[-100] top-[12rem] right-[50rem] w-[600px] h-[600px] rounded-full bg-primary blur-[120px] opacity-12 "></div>
+      <section
+        role="region"
+        aria-label="Hero"
+        className="h-[calc(100vh-8rem)] mx-auto px-8 py-36 text-center sm:px-12 flex flex-col items-center justify-center"
+      >
         {/* Star ratings */}
         <div className="flex flex-col lg:flex-row items-center gap-2 font-body mb-10">
           <div className="flex text-primary">
-            <Star />
-            <Star />
-            <Star />
-            <Star />
-            <Star />
+            <Star size={18} className="text-yellow-400" />
+            <Star size={18} className="text-yellow-400" />
+            <Star size={18} className="text-yellow-400" />
+            <Star size={18} className="text-yellow-400" />
+            <Star size={18} className="text-yellow-400" />
           </div>
-          <p>Used by 10,000+ users</p>
+          <p className="ml-3">Used by 10,000+ users</p>
         </div>
 
         {/* Hero heading */}
-        <h1 class="mb-12  font-heading font-semibold text-secondary text-4xl sm:text-4xl md:text-5xl lg:text-6xl">
-          Land your dream job with <br />{" "}
-          <span className="text-primary">AI-powered</span> resumes.
+        <h1 className="mb-12 font-heading font-semibold text-secondary text-4xl sm:text-4xl md:text-5xl lg:text-6xl">
+          Land your dream job with
+          <br />
+          <span className="text-primary"> AI-powered</span> resumes.
         </h1>
-        <p class="mb-12 text-xl text-secondary font-body">
+        <p className="mb-12 text-xl text-secondary font-body">
           Create, edit and download professional resumes with AI-powered
           assistance.
         </p>
 
         {/* Hero buttons */}
-        <div class="mx-auto font-body flex w-fit items-center justify-center flex-row gap-2 sm:flex-row sm:space-y-0 sm:space-x-4">
-          <button class="rounded-full border-0 bg-primary px-8 py-2 text-base text-white cursor-pointer">
+        <div className="mx-auto font-body flex w-fit items-center justify-center gap-4">
+          <button
+            onClick={() => openSignUp()}
+            type="button"
+            className="rounded-full bg-primary px-8 py-2 text-base text-white cursor-pointer hover:opacity-95 focus:outline-none focus:ring-2 focus:ring-primary/40 transition-colors duration-150 border-1 border-green"
+          >
             Get started
           </button>
-          <button class="rounded-full border-1  px-8 py-2 text-base text-dark-900 cursor-pointer">
+
+          <button
+            type="button"
+            className="rounded-full border-1 border-gray-400 px-8 py-2 text-base text-secondary cursor-pointer hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-gray-200 transition-colors duration-150"
+          >
             Try demo
           </button>
         </div>
 
         {/* Logos */}
-        <div className="container mt-24 mb-5 font-body lg:mb-50 md:50">
-          <p>Trusting by leading brands, including</p>
-          <div className=" flex  items-center justify-center flex-wrap gap-8 mt-6">
+        <div className="container mt-24 mb-5 font-body lg:mb-12 md:mb-8">
+          <p>Trusted by leading brands, including</p>
+          <div className="flex items-center justify-center flex-wrap gap-8 mt-6">
             <img
-              className="w-24"
-              src={Logo1 || "/company-logos/framer.svg"}
-              alt="Resumind-framer-logo"
-            />
-
-            <img
-              className="w-24"
-              src={Logo2 || "/company-logos/huawei.svg"}
-              alt="Resumind-huawei-logo"
+              className="w-24 opacity-80 hover:opacity-100 transition-opacity duration-150"
+              src={Logo1}
+              alt="Resumind framer logo"
             />
             <img
-              className="w-24"
-              src={Logo3 || "/company-logos/instagram.svg"}
-              alt="Resumind-instagram-logo"
+              className="w-24 opacity-80 hover:opacity-100 transition-opacity duration-150"
+              src={Logo2}
+              alt="Resumind huawei logo"
             />
             <img
-              className="w-24"
-              src={Logo4 || "/company-logos/microsoft.svg"}
-              alt="Resumind-microsoft-logo"
+              className="w-24 opacity-80 hover:opacity-100 transition-opacity duration-150"
+              src={Logo3}
+              alt="Resumind instagram logo"
             />
             <img
-              className="w-24"
-              src={Logo5 || "/company-logos/walmart.svg"}
-              alt="Resumind-walmart-logo"
-            />
-            {/* <img
-              className="w-24"
-              src="public\company-logos\framer.svg"
-              alt=""
-            /> */}
-            {/* <img
-              className="w-24"
-              src="public\company-logos\huawei.svg"
-              alt=""
-            /> */}
-            {/* <img
-              className="w-24"
-              src="public\company-logos\instagram.svg"
-              alt=""
+              className="w-24 opacity-80 hover:opacity-100 transition-opacity duration-150"
+              src={Logo4}
+              alt="Resumind microsoft logo"
             />
             <img
-              className="w-24"
-              src="public\company-logos\microsoft.svg"
-              alt=""
+              className="w-24 opacity-80 hover:opacity-100 transition-opacity duration-150"
+              src={Logo5}
+              alt="Resumind walmart logo"
             />
-            <img
-              className="w-24"
-              src="public\company-logos\walmart.svg"
-              alt=""
-            /> */}
           </div>
         </div>
       </section>
@@ -104,3 +98,4 @@ function Hero() {
 }
 
 export default Hero;
+// ...existing code...
