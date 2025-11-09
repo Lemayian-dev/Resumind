@@ -18,7 +18,7 @@ function Hero() {
       <section
         role="region"
         aria-label="Hero"
-        className="h-[calc(100vh-8rem)] mx-auto px-8 py-36 text-center sm:px-12 flex flex-col items-center justify-center"
+        className="h-auto sm:h-[calc(100vh-8rem)] md:h-[calc(100vh-8rem)] lg:h-[calc(100vh-8rem)] mx-auto px-8 py-24 text-center sm:px-12 flex flex-col items-center justify-center"
       >
         {/* Star ratings */}
         <div className="flex flex-col lg:flex-row items-center gap-2 font-body mb-10">

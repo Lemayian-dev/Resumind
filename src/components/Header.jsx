@@ -72,11 +72,11 @@ function Header() {
             <div>
               <button
                 onClick={() => openSignIn()}
-                class="rounded-full  border-0 bg-primary px-8 py-2 text-base text-white cursor-pointer hidden lg:inline"
+                class="rounded-full  border-0 bg-primary px-8 py-2 text-base text-white cursor-pointer  lg:inline"
               >
                 Login
               </button>
-              <Menu className="inline lg:hidden" />
+              <Menu className="hidden  sm:hidden md:hidden lg:hidden" />
             </div>
           </div>
         </nav>
