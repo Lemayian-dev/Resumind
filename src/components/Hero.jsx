@@ -1,5 +1,10 @@
 import React from "react";
 import { Star } from "lucide-react";
+import Logo1 from "/company-logos/framer.svg";
+import Logo2 from "/company-logos/huawei.svg";
+import Logo3 from "/company-logos/instagram.svg";
+import Logo4 from "/company-logos/microsoft.svg";
+import Logo5 from "/company-logos/walmart.svg";
 function Hero() {
   return (
     <div className="">
@@ -42,15 +47,41 @@ function Hero() {
           <div className=" flex  items-center justify-center flex-wrap gap-8 mt-6">
             <img
               className="w-24"
-              src="public\company-logos\framer.svg"
-              alt=""
+              src={Logo1 || "/company-logos/framer.svg"}
+              alt="Resumind-framer-logo"
+            />
+
+            <img
+              className="w-24"
+              src={Logo2 || "/company-logos/huawei.svg"}
+              alt="Resumind-huawei-logo"
             />
             <img
               className="w-24"
-              src="public\company-logos\huawei.svg"
-              alt=""
+              src={Logo3 || "/company-logos/instagram.svg"}
+              alt="Resumind-instagram-logo"
             />
             <img
+              className="w-24"
+              src={Logo4 || "/company-logos/microsoft.svg"}
+              alt="Resumind-microsoft-logo"
+            />
+            <img
+              className="w-24"
+              src={Logo5 || "/company-logos/walmart.svg"}
+              alt="Resumind-walmart-logo"
+            />
+            {/* <img
+              className="w-24"
+              src="public\company-logos\framer.svg"
+              alt=""
+            /> */}
+            {/* <img
+              className="w-24"
+              src="public\company-logos\huawei.svg"
+              alt=""
+            /> */}
+            {/* <img
               className="w-24"
               src="public\company-logos\instagram.svg"
               alt=""
@@ -64,7 +95,7 @@ function Hero() {
               className="w-24"
               src="public\company-logos\walmart.svg"
               alt=""
-            />
+            /> */}
           </div>
         </div>
       </section>

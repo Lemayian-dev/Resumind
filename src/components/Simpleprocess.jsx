@@ -1,5 +1,6 @@
 import React from "react";
 import { Zap, KeyRound, Download, FilePenLine } from "lucide-react";
+import SimpleImage from "/group-image-1.png";
 function Simpleprocess() {
   return (
     <div className=" flex flex-col justify-center items-center">
@@ -19,6 +20,11 @@ function Simpleprocess() {
           className="w-full max-w-3xl mx-auto h-auto object-cover"
           src="src/assets/group-image-1.png"
           alt=""
+        />
+        <img
+          className="w-full max-w-3xl mx-auto h-auto object-cover"
+          src={SimpleImage || "/group-image-1.png"}
+          alt="Resumind Group image"
         />
         <div className="flex flex-col gap-y-4 items-center justify-center">
           {/* Card 1 */}

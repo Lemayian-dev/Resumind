@@ -6,6 +6,7 @@ import {
   SignInButton,
   UserButton,
 } from "@clerk/clerk-react";
+import LogoUrl from "/logo.svg";
 
 import { useClerk } from "@clerk/clerk-react";
 
@@ -27,10 +28,15 @@ function Header() {
         <nav className=" p-4 top-0 z-50 h-16 font-body">
           <div className="container mx-auto flex justify-between items-center">
             {/* Logo main */}
-            <img
+            {/* <img
               className="w-32 cursor-pointer"
               src="src/assets/logo.svg"
               alt=""
+            /> */}
+            <img
+              className="w-32 cursor-pointer"
+              src={LogoUrl || "/logo.svg"}
+              alt="Resumind-logo"
             />
 
             {/* Nav links */}
